@@ -20,10 +20,6 @@ class Bmi{
 		float get_weight(int i){
 		return weight[i];
 		}
-		float bmi(float h,float w){
-		float q;
-		q=w/((h/100)*(h/100));
-		return q;
-		}
+	
 		
 };

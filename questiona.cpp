@@ -2,9 +2,10 @@
 #include<cstdio>
 #include<fstream>
 #include<stdlib.h>
+#include"bmi.cpp"
 #include"classa.h"
 using namespace std;
- 
+
 int main(){
 	Bmi rt; 
 	ifstream fptr;
@@ -27,24 +28,26 @@ int main(){
 	}
 	temp=i;
 	for(i=0;i<=temp;i++){
-		if(rt.bmi(rt.get_height(i),rt.get_weight(i))<15)
+		if(bmi(rt.get_height(i),rt.get_weight(i))<15)
 		fptr2<<"Very severely underweight"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=15&&rt.bmi(rt.get_height(i),rt.get_weight(i))<16)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=15&&bmi(rt.get_height(i),rt.get_weight(i))<16)
 		fptr2<<"Severely underweight"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=16&&rt.bmi(rt.get_height(i),rt.get_weight(i))<18.5)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=16&&bmi(rt.get_height(i),rt.get_weight(i))<18.5)
 		fptr2<<"Underweight"<<endl; 
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=18.5&&rt.bmi(rt.get_height(i),rt.get_weight(i))<25)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=18.5&&bmi(rt.get_height(i),rt.get_weight(i))<25)
 		fptr2<<"Normal"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=25&&rt.bmi(rt.get_height(i),rt.get_weight(i))<30)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=25&&bmi(rt.get_height(i),rt.get_weight(i))<30)
 		fptr2<<"Overweight"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=30&&rt.bmi(rt.get_height(i),rt.get_weight(i))<35)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=30&&bmi(rt.get_height(i),rt.get_weight(i))<35)
 		fptr2<<"Obese Class I (Moderately obese)"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=35&&rt.bmi(rt.get_height(i),rt.get_weight(i))<40)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=35&&bmi(rt.get_height(i),rt.get_weight(i))<40)
 		fptr2<<"Obese Class II (Severely obese)"<<endl;
-		else if(rt.bmi(rt.get_height(i),rt.get_weight(i))>=40)
+		else if(bmi(rt.get_height(i),rt.get_weight(i))>=40)
 		fptr2<<"Obese Class III (Very severely obese)"<<endl;
 }
+
 }
+
 
 
 
